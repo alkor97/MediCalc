@@ -1,0 +1,46 @@
+<resources>
+	<string name="app_name" translatable="false">MediCalc</string>
+
+	<string name="dosage_title">Dosage</string>
+	<string name="qtc_title" translatable="false">Q-Tc</string>
+	<string name="dosage_dose">Dose</string>
+	<string name="dosage_mass">Mass</string>
+	<string name="dosage_suspension">Suspension</string>
+	<string name="dosage_doses_per_day">Doses per day</string>
+	<string name="dosage_one_dose">One dose</string>
+	<string name="dosage_days">Days</string>
+	<string name="dosage_for_treatment">For treatment</string>
+	<string name="dosage_dose_unit" translatable="false">mg/kg</string>
+	<string name="dosage_mass_unit" translatable="false">kg</string>
+	<string name="dosage_suspension_mass_unit" translatable="false">mg</string>
+	<string name="dosage_suspension_volume_unit" translatable="false">ml</string>
+	<string name="dosage_one_dose_unit" translatable="false">ml</string>
+	<string name="dosage_for_treatment_unit" translatable="false">ml</string>
+	<string name="dosage_suspension_for">per</string>
+	<string name="qtc_speed">Paper speed</string>
+	<string name="qtc_qt_interval">Q-T interval</string>
+	<string name="qtc_rr_interval">R-R interval</string>
+	<string name="qtc_interval">Q-Tc interval</string>
+	<string name="qtc_speed_unit" translatable="false">mm/s</string>
+	<string name="qtc_interval_unit_box" translatable="false">box</string>
+	<string name="qtc_interval_unit_ms" translatable="false">ms</string>
+	<string name="qtc_interval_unit_s" translatable="false">s</string>
+	<string-array name="qtc_speed_entries">
+		<item>20</item>
+		<item>50</item>
+	</string-array>
+	<string-array name="qtc_qt_interval_unit_entries">
+		<item>@string/qtc_interval_unit_box</item>
+		<item>@string/qtc_interval_unit_ms</item>
+		<item>@string/qtc_interval_unit_s</item>
+	</string-array>
+	<string-array name="qtc_rr_interval_unit_entries">
+		<item>@string/qtc_interval_unit_box</item>
+		<item>@string/qtc_interval_unit_ms</item>
+		<item>@string/qtc_interval_unit_s</item>
+	</string-array>
+	<string-array name="qtc_interval_unit_entries">
+		<item>@string/qtc_interval_unit_ms</item>
+		<item>@string/qtc_interval_unit_s</item>
+	</string-array>
+</resources>

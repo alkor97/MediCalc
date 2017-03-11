@@ -1,0 +1,248 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="layout.DosageFragment">
+
+
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		>
+
+		<TextView
+			android:id="@+id/dosage_dose_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+			android:text="@string/dosage_dose"/>
+
+		<EditText
+			android:id="@+id/dosage_dose"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="numberDecimal"
+			/>
+
+		<TextView
+			android:id="@+id/dosage_dose_unit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/dosage_dose_unit"/>
+	</TableRow>
+
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/dosage_mass_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+			android:text="@string/dosage_mass"/>
+
+		<EditText
+			android:id="@+id/dosage_mass"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="numberDecimal"
+			/>
+
+		<TextView
+			android:id="@+id/dosage_mass_unit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/dosage_mass_unit"/>
+
+	</TableRow>
+
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/dosage_suspension_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+			android:text="@string/dosage_suspension"/>
+
+		<EditText
+			android:id="@+id/dosage_suspension_mass"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="numberDecimal"
+			/>
+
+		<TextView
+			android:id="@+id/dosage_suspension_mass_unit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/dosage_suspension_mass_unit"/>
+
+	</TableRow>
+
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/dosage_suspension_for_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+			android:text="@string/dosage_suspension_for"/>
+
+		<EditText
+			android:id="@+id/dosage_suspension_volume"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="numberDecimal"
+			/>
+
+		<TextView
+			android:id="@+id/dosage_suspension_volume_unit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/dosage_suspension_volume_unit"/>
+	</TableRow>
+
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/dosage_doses_per_day_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+			android:text="@string/dosage_doses_per_day"/>
+
+		<EditText
+			android:id="@+id/dosage_doses_per_day"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="numberDecimal"/>
+
+		<TextView
+			android:id="@+id/textView11"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			/>
+	</TableRow>
+
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+			android:id="@+id/dosage_one_dose_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+			android:text="@string/dosage_one_dose"/>
+
+		<EditText
+			android:id="@+id/dosage_one_dose"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:clickable="false"
+			android:cursorVisible="false"
+			android:ems="10"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+			android:inputType="numberDecimal"/>
+
+		<TextView
+			android:id="@+id/dosage_one_doze_unit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/dosage_one_dose_unit"/>
+	</TableRow>
+
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+			android:id="@+id/dosage_days_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+			android:text="@string/dosage_days"/>
+
+		<EditText
+			android:id="@+id/dosage_days"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:ems="10"
+			android:inputType="numberDecimal"/>
+
+		<TextView
+			android:id="@+id/textView15"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			/>
+
+	</TableRow>
+
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+			android:id="@+id/dosage_for_treatment_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="right"
+			android:text="@string/dosage_for_treatment"/>
+
+		<EditText
+			android:id="@+id/dosage_for_treatment"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:clickable="false"
+			android:cursorVisible="false"
+			android:ems="10"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+			android:inputType="numberDecimal"/>
+
+		<TextView
+			android:id="@+id/dosage_for_treatment_unit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/dosage_for_treatment_unit"/>
+	</TableRow>
+
+</TableLayout>

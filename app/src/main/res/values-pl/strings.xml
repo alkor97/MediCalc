@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="dosage_title">Dawkowanie</string>
+	<string name="dosage_dose">Dawka</string>
+	<string name="dosage_mass">Masa</string>
+	<string name="dosage_suspension">Zawiesina</string>
+	<string name="dosage_doses_per_day">Dawek na dobę</string>
+	<string name="dosage_one_dose">Jedna dawka</string>
+	<string name="dosage_days">Dni</string>
+	<string name="dosage_for_treatment">Na kurację</string>
+	<string name="dosage_suspension_for">na</string>
+	<string name="qtc_speed">Prędkość papieru</string>
+	<string name="qtc_qt_interval">Odstęp Q-T</string>
+	<string name="qtc_rr_interval">Odstęp R-R</string>
+	<string name="qtc_interval">Odstęp Q-Tc</string>
+</resources>
