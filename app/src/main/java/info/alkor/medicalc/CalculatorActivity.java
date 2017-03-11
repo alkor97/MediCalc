@@ -1,28 +1,18 @@
 package info.alkor.medicalc;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-
-import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 import layout.DosageFragment;
 import layout.QTcFragment;
 
-public class CalculatorActivity extends AppCompatActivity  {
+public class CalculatorActivity extends AppCompatActivity {
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -71,8 +61,10 @@ public class CalculatorActivity extends AppCompatActivity  {
 		@Override
 		public Fragment getItem(int position) {
 			switch (position) {
-				case 0: return new DosageFragment();
-				case 1: return new QTcFragment();
+				case 0:
+					return new DosageFragment();
+				case 1:
+					return new QTcFragment();
 			}
 			throw new IllegalArgumentException();
 		}
