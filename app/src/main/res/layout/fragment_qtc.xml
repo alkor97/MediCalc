@@ -1,106 +1,91 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="layout.QTcFragment">
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            tools:context="layout.QTcFragment">
 
+	<!-- first row -->
+	<TextView
+		android:id="@+id/qtc_speed_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/qtc_speed"/>
 
-	<TableRow
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content">
+	<Spinner
+		android:id="@+id/qtc_speed"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="end"
+		android:entries="@array/qtc_speed_entries"/>
 
-		<TextView
-			android:id="@+id/qtc_speed_label"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/qtc_speed"/>
+	<TextView
+		android:id="@+id/qtc_speed_unit"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/qtc_speed_unit"/>
 
-		<Spinner
-			android:id="@+id/qtc_speed"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:entries="@array/qtc_speed_entries"/>
+	<!-- second row -->
+	<TextView
+		android:id="@+id/qtc_qt_interval_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/qtc_qt_interval"/>
 
-		<TextView
-			android:id="@+id/qtc_speed_unit"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/qtc_speed_unit"/>
-	</TableRow>
+	<EditText
+		android:id="@+id/qtc_qt_interval"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:inputType="numberDecimal"/>
 
-		<TableRow
-			android:layout_width="match_parent"
-			android:layout_height="match_parent">
+	<Spinner
+		android:id="@+id/qtc_qt_interval_unit"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:layout_rowSpan="2"
+		android:entries="@array/qtc_qt_interval_unit_entries"
+		/>
 
-			<TextView
-				android:id="@+id/qtc_qt_interval_label"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="@string/qtc_qt_interval"/>
+	<!-- third row -->
+	<TextView
+		android:id="@+id/qtc_rr_interval_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/qtc_rr_interval"/>
 
-			<EditText
-				android:id="@+id/qtc_qt_interval"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:ems="10"
-				android:inputType="numberDecimal"/>
+	<EditText
+		android:id="@+id/qtc_rr_interval"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:inputType="numberDecimal"/>
 
-			<Spinner
-				android:id="@+id/qtc_qt_interval_unit"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:entries="@array/qtc_qt_interval_unit_entries"/>
-		</TableRow>
+	<!-- fourth row -->
+	<TextView
+		android:id="@+id/qtc_interval_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/qtc_interval"/>
 
-		<TableRow
-			android:layout_width="match_parent"
-			android:layout_height="match_parent">
+	<EditText
+		android:id="@+id/qtc_interval"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:cursorVisible="false"
+		android:ems="10"
+		android:focusable="false"
+		android:focusableInTouchMode="false"
+		android:inputType="numberDecimal"/>
 
-			<TextView
-				android:id="@+id/qtc_rr_interval_label"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="@string/qtc_rr_interval"/>
+	<Spinner
+		android:id="@+id/qtc_interval_unit"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:entries="@array/qtc_interval_unit_entries"/>
 
-			<EditText
-				android:id="@+id/qtc_rr_interval"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:ems="10"
-				android:inputType="numberDecimal"/>
-
-			<Spinner
-				android:id="@+id/qtc_rr_interval_unit"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:entries="@array/qtc_rr_interval_unit_entries"/>
-		</TableRow>
-
-		<TableRow
-			android:layout_width="match_parent"
-			android:layout_height="match_parent">
-
-			<TextView
-				android:id="@+id/qtc_interval_label"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="@string/qtc_interval"/>
-
-			<EditText
-				android:id="@+id/qtc_interval"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:clickable="false"
-				android:cursorVisible="false"
-				android:ems="10"
-				android:focusable="false"
-				android:focusableInTouchMode="false"
-				android:inputType="numberDecimal"/>
-
-			<Spinner
-				android:id="@+id/qtc_interval_unit"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:entries="@array/qtc_interval_unit_entries"/>
-		</TableRow>
-</TableLayout>
+</GridLayout>
