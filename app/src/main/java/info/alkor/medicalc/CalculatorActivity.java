@@ -9,8 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import layout.DosageFragment;
-import layout.QTcFragment;
+import info.alkor.medicalc.layout.DosageFragment;
+import info.alkor.medicalc.layout.QTcFragment;
 
 public class CalculatorActivity extends AppCompatActivity {
 
@@ -52,9 +52,9 @@ public class CalculatorActivity extends AppCompatActivity {
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.
 	 */
-	public class SectionsPagerAdapter extends FragmentPagerAdapter {
+	private class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-		public SectionsPagerAdapter(FragmentManager fm) {
+		private SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
 

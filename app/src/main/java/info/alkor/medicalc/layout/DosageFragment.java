@@ -1,4 +1,4 @@
-package layout;
+package info.alkor.medicalc.layout;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

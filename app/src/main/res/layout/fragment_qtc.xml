@@ -5,7 +5,7 @@
             android:layout_height="wrap_content"
             android:columnCount="3"
             android:rowCount="4"
-            tools:context="layout.QTcFragment">
+            tools:context=".layout.QTcFragment">
 
 	<!-- first row -->
 	<TextView
