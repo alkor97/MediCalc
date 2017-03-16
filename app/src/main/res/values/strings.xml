@@ -25,17 +25,4 @@
 	<string name="qtc_interval_unit_box" translatable="false">box</string>
 	<string name="qtc_interval_unit_ms" translatable="false">ms</string>
 	<string name="qtc_interval_unit_s" translatable="false">s</string>
-	<string-array name="qtc_speed_entries">
-		<item>20</item>
-		<item>50</item>
-	</string-array>
-	<string-array name="qtc_qt_interval_unit_entries">
-		<item>@string/qtc_interval_unit_box</item>
-		<item>@string/qtc_interval_unit_ms</item>
-		<item>@string/qtc_interval_unit_s</item>
-	</string-array>
-	<string-array name="qtc_interval_unit_entries">
-		<item>@string/qtc_interval_unit_ms</item>
-		<item>@string/qtc_interval_unit_s</item>
-	</string-array>
 </resources>

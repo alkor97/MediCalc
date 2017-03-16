@@ -19,7 +19,7 @@ public class QTcCalculatorTest {
 	@Test
 	public void testAllDataAvailableWithBoxInput() {
 		QTcCalculator c = new QTcCalculator();
-		c.setSpeed(25.0);
+		c.setSpeed(25);
 		c.setQtInterval(5.0);
 		c.setRrInterval(3.0);
 		c.setIntervalUnit(QTcCalculator.Unit.box);
@@ -71,7 +71,7 @@ public class QTcCalculatorTest {
 		QTcCalculator c = new QTcCalculator();
 		Assert.assertNull(c.getQtcInterval());
 
-		c.setSpeed(25.0);
+		c.setSpeed(25);
 		Assert.assertNull(c.getQtcInterval());
 
 		c.setIntervalUnit(QTcCalculator.Unit.box);

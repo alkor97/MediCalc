@@ -1,91 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="3"
-            android:rowCount="4"
-            tools:context=".layout.QTcFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+	>
 
-	<!-- first row -->
-	<TextView
-		android:id="@+id/qtc_speed_label"
-		android:layout_width="wrap_content"
+	<data>
+
+		<variable
+			name="model"
+			type="info.alkor.medicalc.layout.QTcViewModel"/>
+	</data>
+
+	<GridLayout
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/qtc_speed"/>
+		android:columnCount="3"
+		android:rowCount="4"
+		tools:context="info.alkor.medicalc.layout.QTcFragment">
 
-	<Spinner
-		android:id="@+id/qtc_speed"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_gravity="end"
-		android:entries="@array/qtc_speed_entries"/>
+		<!-- first row -->
+		<TextView
+			android:id="@+id/qtc_speed_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/qtc_speed"
+			android:visibility="@{model.speedVisible}"
+			/>
 
-	<TextView
-		android:id="@+id/qtc_speed_unit"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/qtc_speed_unit"/>
+		<Spinner
+			android:id="@+id/qtc_speed"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end"
+			android:entries="@{model.speedEntries}"
+			android:selectedItemPosition="@={model.speedIndex}"
+			android:visibility="@{model.speedVisible}"
+			/>
 
-	<!-- second row -->
-	<TextView
-		android:id="@+id/qtc_qt_interval_label"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/qtc_qt_interval"/>
+		<TextView
+			android:id="@+id/qtc_speed_unit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/qtc_speed_unit"
+			android:visibility="@{model.speedVisible}"
+			/>
 
-	<EditText
-		android:id="@+id/qtc_qt_interval"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:ems="10"
-		android:inputType="numberDecimal"/>
+		<!-- second row -->
+		<TextView
+			android:id="@+id/qtc_qt_interval_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/qtc_qt_interval"/>
 
-	<Spinner
-		android:id="@+id/qtc_qt_interval_unit"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_gravity="center_vertical"
-		android:layout_rowSpan="2"
-		android:entries="@array/qtc_qt_interval_unit_entries"
-		/>
+		<EditText
+			android:id="@+id/qtc_qt_interval"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="numberDecimal"
+			android:text="@={model.qtInterval}"/>
 
-	<!-- third row -->
-	<TextView
-		android:id="@+id/qtc_rr_interval_label"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/qtc_rr_interval"/>
+		<Spinner
+			android:id="@+id/qtc_qt_interval_unit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_rowSpan="2"
+			android:entries="@{model.intervalUnitEntries}"
+			android:selectedItemPosition="@={model.intervalUnitIndex}"
+			/>
 
-	<EditText
-		android:id="@+id/qtc_rr_interval"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:ems="10"
-		android:inputType="numberDecimal"/>
+		<!-- third row -->
+		<TextView
+			android:id="@+id/qtc_rr_interval_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/qtc_rr_interval"/>
 
-	<!-- fourth row -->
-	<TextView
-		android:id="@+id/qtc_interval_label"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/qtc_interval"/>
+		<EditText
+			android:id="@+id/qtc_rr_interval"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="numberDecimal"
+			android:text="@={model.rrInterval}"/>
 
-	<EditText
-		android:id="@+id/qtc_interval"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:clickable="false"
-		android:cursorVisible="false"
-		android:ems="10"
-		android:focusable="false"
-		android:focusableInTouchMode="false"
-		android:inputType="numberDecimal"/>
+		<!-- fourth row -->
+		<TextView
+			android:id="@+id/qtc_interval_label"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/qtc_interval"/>
 
-	<Spinner
-		android:id="@+id/qtc_interval_unit"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:entries="@array/qtc_interval_unit_entries"/>
+		<EditText
+			android:id="@+id/qtc_interval"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:clickable="false"
+			android:cursorVisible="false"
+			android:ems="10"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+			android:inputType="numberDecimal"
+			android:text="@{model.qtcInterval}"/>
 
-</GridLayout>
+		<Spinner
+			android:id="@+id/qtc_interval_unit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:entries="@{model.qtcUnitEntries}"
+			android:selectedItemPosition="@={model.qtcUnitIndex}"
+			/>
+
+	</GridLayout>
+</layout>

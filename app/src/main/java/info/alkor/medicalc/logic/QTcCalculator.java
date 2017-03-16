@@ -6,27 +6,46 @@ package info.alkor.medicalc.logic;
  */
 public class QTcCalculator {
 
-	private Double speed;
-	private Double qtInterval;
-	private Double rrInterval;
-	private Unit intervalUnit;
-	private Double qtcInterval;
-	private Unit qtcUnit;
+	private Integer speed = 25;
+	private Double qtInterval = 5.0;
+	private Double rrInterval = 3.0;
+	private Unit intervalUnit = Unit.box;
+	private Unit qtcUnit = Unit.ms;
 
-	public void setSpeed(Double speed) {
+	public Integer getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(Integer speed) {
 		this.speed = speed;
+	}
+
+	public Double getQtInterval() {
+		return qtInterval;
 	}
 
 	public void setQtInterval(Double qtInterval) {
 		this.qtInterval = qtInterval;
 	}
 
+	public Double getRrInterval() {
+		return rrInterval;
+	}
+
 	public void setRrInterval(Double rrInterval) {
 		this.rrInterval = rrInterval;
 	}
 
+	public Unit getIntervalUnit() {
+		return intervalUnit;
+	}
+
 	public void setIntervalUnit(Unit intervalUnit) {
 		this.intervalUnit = intervalUnit;
+	}
+
+	public Unit getQtcUnit() {
+		return qtcUnit;
 	}
 
 	public void setQtcUnit(Unit qtcUnit) {
@@ -41,9 +60,7 @@ public class QTcCalculator {
 		double p = intervalUnit == Unit.box ? speed : 1;
 		double qt = qtInterval * intervalUnit.getQuotient() / p;
 		double rr = rrInterval * intervalUnit.getQuotient() / p;
-		qtcInterval = qt / Math.sqrt(rr) / qtcUnit.getQuotient();
-
-		return qtcInterval;
+		return qt / Math.sqrt(rr) / qtcUnit.getQuotient();
 	}
 
 	public enum Unit {
