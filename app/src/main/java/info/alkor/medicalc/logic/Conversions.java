@@ -1,10 +1,17 @@
 package info.alkor.medicalc.logic;
 
+import android.support.annotation.NonNull;
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 /**
  * Conversion utilities.
  * Created by Marlena on 2017-03-14.
  */
 public class Conversions {
+	private final NumberFormat DOUBLE_FORMAT = new DecimalFormat("#.##");
+
 	public Double toDouble(String value) {
 		try {
 			return Double.parseDouble(value);
@@ -22,7 +29,11 @@ public class Conversions {
 	}
 
 	public String toString(Double value) {
-		return value != null ? value.toString() : "";
+		return toString(value, DOUBLE_FORMAT);
+	}
+
+	private String toString(Double value, @NonNull NumberFormat format) {
+		return value != null ? format.format(value) : "";
 	}
 
 	public String toString(Integer value) {

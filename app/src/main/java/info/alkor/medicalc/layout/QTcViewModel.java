@@ -9,7 +9,7 @@ import info.alkor.medicalc.logic.Conversions;
 import info.alkor.medicalc.logic.QTcCalculator;
 
 /**
- * QTc view model.
+ * QTc calculator view model.
  * Created by Marlena on 2017-03-15.
  */
 public class QTcViewModel extends BaseObservable {
@@ -23,11 +23,11 @@ public class QTcViewModel extends BaseObservable {
 	private final Conversions cvt = new Conversions();
 	private final QTcCalculator calculator = new QTcCalculator();
 
-	public String getSpeed() {
+	private String getSpeed() {
 		return cvt.toString(calculator.getSpeed());
 	}
 
-	public void setSpeed(String speed) {
+	private void setSpeed(String speed) {
 		calculator.setSpeed(cvt.toInteger(speed));
 		notifyPropertyChanged(BR.qtcInterval);
 	}
@@ -50,11 +50,11 @@ public class QTcViewModel extends BaseObservable {
 		notifyPropertyChanged(BR.qtcInterval);
 	}
 
-	public String getIntervalUnit() {
+	private String getIntervalUnit() {
 		return cvt.toString(calculator.getIntervalUnit());
 	}
 
-	public void setIntervalUnit(String intervalUnit) {
+	private void setIntervalUnit(String intervalUnit) {
 		calculator.setIntervalUnit(cvt.toQtcIntervalUnit(intervalUnit));
 		notifyPropertyChanged(BR.qtcInterval);
 		notifyPropertyChanged(BR.speedVisible);
@@ -65,11 +65,11 @@ public class QTcViewModel extends BaseObservable {
 		return cvt.toString(calculator.getQtcInterval());
 	}
 
-	public String getQtcUnit() {
+	private String getQtcUnit() {
 		return cvt.toString(calculator.getQtcUnit());
 	}
 
-	public void setQtcUnit(String qtcUnit) {
+	private void setQtcUnit(String qtcUnit) {
 		calculator.setQtcUnit(cvt.toQtcIntervalUnit(qtcUnit));
 		notifyPropertyChanged(BR.qtcInterval);
 	}

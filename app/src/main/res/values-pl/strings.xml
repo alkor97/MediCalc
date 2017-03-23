@@ -2,7 +2,7 @@
 <resources>
 	<string name="dosage_title">Dawkowanie</string>
 	<string name="dosage_dose">Dawka</string>
-	<string name="dosage_mass">Masa</string>
+	<string name="dosage_mass">Masa ciała</string>
 	<string name="dosage_suspension">Zawiesina</string>
 	<string name="dosage_doses_per_day">Dawek na dobę</string>
 	<string name="dosage_one_dose">Jedna dawka</string>

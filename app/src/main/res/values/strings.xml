@@ -4,7 +4,7 @@
 	<string name="dosage_title">Dosage</string>
 	<string name="qtc_title" translatable="false">Q-Tc</string>
 	<string name="dosage_dose">Dose</string>
-	<string name="dosage_mass">Mass</string>
+	<string name="dosage_mass">Body mass</string>
 	<string name="dosage_suspension">Suspension</string>
 	<string name="dosage_doses_per_day">Doses per day</string>
 	<string name="dosage_one_dose">One dose</string>
